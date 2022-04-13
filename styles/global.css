@@ -10,6 +10,10 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  @apply bg-[#fdd6bc];
+  /* bg-[#bcb8e936]; */
+  height: 100%;
+ 
 }
 
 * {
@@ -19,7 +23,7 @@ body {
 a {
   /* color: #0070f3; */
   text-decoration: none;
-  @apply text-[#0070f3];
+  /* @apply text-[#f25b32]; */
 }
 
 a:hover {
