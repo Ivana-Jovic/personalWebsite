@@ -17,7 +17,7 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div className={styles.container}>
+    <div className="relative min-h-screen">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Ivana Jovic - personal website" />
@@ -30,9 +30,9 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <section className="mx-0 mb-6">
-        <Navbar />
-      </section>
+      {/* <div className="mx-0 mb-10"> */}
+      <Navbar />
+      {/* </div> */}
       <header className={styles.header}>
         {home ? (
           <>
@@ -54,13 +54,13 @@ export default function Layout({
                   priority
                   src="/images/profile.jpg"
                   className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
+                  height={144}
+                  width={144}
                   alt={name}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingXl}>
+            <h2 className={utilStyles.heading2Xl}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
@@ -71,12 +71,12 @@ export default function Layout({
       <main className="mx-12 grid place-content-center">{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
+          <Link href="/blogs">
+            <a>← Back to blogs page</a>
           </Link>
         </div>
       )}
-      <footer className="fixed bottom-0 w-full bg-[#e27c6055] text-center">
+      <footer className="absolute bottom-0 w-full bg-[#eb937a] text-center">
         <div>Ivana Jovic 2022.</div>
       </footer>
     </div>
